@@ -9,20 +9,23 @@ body {
 .container {
   width: 80%; }
 
+header {
+  text-align: center; }
+
 .card {
   align-items: center;
-  margin: 0 auto;
-  height: 150px; }
+  height: 150px;
+  margin: 0 auto; }
 
 .card-back {
   align-items: center;
-  margin: 0 auto;
   background-color: #3fb0ac;
   border: 5px solid #fff;
   display: flex;
   flex-direction: column;
   height: 100%;
   justify-content: center;
+  margin: 0 auto;
   width: 100%; }
 
 [data-font="one"] {
