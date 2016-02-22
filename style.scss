@@ -1,5 +1,6 @@
 $blue: #3fb0ac;
 $white: #fff;
+$red: #f00;
 
 *,
 *::before,
@@ -17,6 +18,10 @@ body {
 
 header {
   text-align: center;
+}
+
+h2 {
+  font-size: 20px;
 }
 
 .card {
@@ -69,4 +74,15 @@ header {
 
 .inactive {
   display: none;
+}
+
+footer {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.winner {
+  background-color: $red;
+  color: $white;
+  width: 50%;
 }

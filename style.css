@@ -55,4 +55,13 @@ header {
 .inactive {
   display: none; }
 
+footer {
+  margin: 0 auto;
+  text-align: center; }
+
+.winner {
+  background-color: #f00;
+  color: #fff;
+  padding: 20px; }
+
 /*# sourceMappingURL=style.css.map */
