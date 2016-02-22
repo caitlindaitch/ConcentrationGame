@@ -43,17 +43,19 @@ checkAnswer = function() {
       selectedCardOne.classList.add("inactive");
 
       selectedCardTwo.classList.add("inactive");
-    }, 1000);
 
-    numFlipped = 0;
+      numFlipped = 0;
+
+    }, 1000);
   } else {
     setTimeout(function() {
       cardOne.classList.add("inactive");
 
       cardTwo.classList.add("inactive");
-    }, 1000);
 
-    numFlipped = 0;
+      numFlipped = 0;
+
+    }, 1000);
   };
 }
 

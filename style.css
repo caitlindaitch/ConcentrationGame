@@ -11,10 +11,12 @@ body {
 
 .card {
   align-items: center;
+  margin: 0 auto;
   height: 150px; }
 
 .card-back {
   align-items: center;
+  margin: 0 auto;
   background-color: #3fb0ac;
   border: 5px solid #fff;
   display: flex;
@@ -37,6 +39,14 @@ body {
 
 [data-font="four"] {
   font-family: georgia;
+  font-size: 35px; }
+
+[data-font="five"] {
+  font-family: 'arial black';
+  font-size: 35px; }
+
+[data-font="six"] {
+  font-family: Impact;
   font-size: 35px; }
 
 .inactive {
