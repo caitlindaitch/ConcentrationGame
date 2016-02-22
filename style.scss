@@ -31,22 +31,22 @@ body {
   width: 100%;
 }
 
-.font-one {
+[data-font="one"] {
   font-family: arial;
   font-size: 35px;
 }
 
-.font-two {
+[data-font="two"] {
   font-family: verdana;
   font-size: 35px;
 }
 
-.font-three {
+[data-font="three"] {
   font-family: 'times new roman';
   font-size: 35px;
 }
 
-.font-four {
+[data-font="four"] {
   font-family: georgia;
   font-size: 35px;
 }

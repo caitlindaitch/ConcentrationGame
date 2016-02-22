@@ -14,23 +14,47 @@ startGame = function() {
 yourTurn = function() {
   var activeCard = this.firstElementChild;
 
-  if (numFlipped < 2) {
+  if (numFlipped === 0) {
     activeCard.classList.remove("inactive");
 
     numFlipped++;
 
     cardOne = activeCard;
-    cardOneFont = activeCard.style.fontFamily;
+    cardOneFont = activeCard.getAttribute("data-font");
 
-    console.log(cardOne);
-    console.log(cardOneFont);
+  } else if (numFlipped === 1) {
+    activeCard.classList.remove("inactive");
 
-    if (cardOne != "") {
-      console.log("One is clicked");
-    }
-  } else {
-    console.log("IDK");
-  }
+    numFlipped++;
+
+    cardTwo = activeCard;
+    cardTwoFont = activeCard.getAttribute("data-font");
+
+    checkAnswer();
+  };
 };
+
+checkAnswer = function() {
+  if (cardOneFont === cardTwoFont) {
+    var selectedCardOne = this.cardOne.parentNode;
+    var selectedCardTwo = this.cardTwo.parentNode;
+
+    setTimeout(function() {
+      selectedCardOne.classList.add("inactive");
+
+      selectedCardTwo.classList.add("inactive");
+    }, 1000);
+
+    numFlipped = 0;
+  } else {
+    setTimeout(function() {
+      cardOne.classList.add("inactive");
+
+      cardTwo.classList.add("inactive");
+    }, 1000);
+
+    numFlipped = 0;
+  };
+}
 
 startGame();
