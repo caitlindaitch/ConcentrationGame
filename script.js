@@ -5,6 +5,7 @@ var cardTwo = "";
 var cardOneFont = "";
 var cardTwoFont = "";
 var matches = 0;
+var gameInProgress = true;
 var timer = document.querySelector(".timer");
 
 startGame = function() {
@@ -12,7 +13,7 @@ startGame = function() {
     card[i].addEventListener("click", yourTurn);
   };
 
-  timer.addEventListener("click", timedGame);
+  timer.addEventListener("click", playTimedGame);
 };
 
 yourTurn = function() {
@@ -67,16 +68,22 @@ checkAnswer = function() {
   };
 };
 
-timedGame = function() {
+playTimedGame = function() {
   var loser = document.querySelector(".loser-outer");
 
-  setTimeout(function() {
-    loser.classList.remove("inactive");
-  }, 15000);
+  yourTurn();
+
+  if (gameInProgress === true) {
+    setTimeout(function() {
+      loser.classList.remove("inactive");
+    }, 700);
+  };
 };
 
 winGame = function() {
   var winner = document.querySelector(".winner-outer");
+
+  gameInProgress = false;
 
   setTimeout(function() {
     if (matches === 6) {
