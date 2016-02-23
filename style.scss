@@ -3,8 +3,6 @@ $dark-blue: #3d50b4;
 $grey: #e5e5e5;
 $white: #fff;
 $black: #000;
-$red: #f00;
-$gold: #ffd700;
 $black-background: rgba(0, 0, 0, .75);
 $header-title: Lato, sans-serif;
 $body-text: Merriweather, serif;
@@ -94,7 +92,9 @@ h1 {
 
 .intro {
   color: $black;
+  margin: 0 auto;
   text-align: center;
+  width: 75%;
 }
 
 h2 {
@@ -134,8 +134,49 @@ h2 {
   font-size: 20px;
 }
 
+.choose-colors {
+  margin: 0 auto;
+}
+
+.color-select {
+  display: inline-block;
+  margin: 20px 5px 5px;
+  text-align: center;
+}
+
+.deck-one {
+  background-color: $blue;
+  height: 25px;
+  padding: 5px;
+  text-align: center;
+  width: 25px;
+}
+
+.deck-two {
+  background-color: $dark-blue;
+  height: 25px;
+  padding: 5px;
+  text-align: center;
+  width: 25px;
+}
+
+.deck-three {
+  background-color: $black;
+  height: 25px;
+  padding: 5px;
+  text-align: center;
+  width: 25px;
+}
+
+.deck-four {
+  background-color: $grey;
+  height: 25px;
+  padding: 5px;
+  text-align: center;
+  width: 25px;
+}
+
 .container {
-  padding-top: 20px;
   width: 80%;
 }
 

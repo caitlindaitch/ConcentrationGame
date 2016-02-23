@@ -7,6 +7,7 @@ var cardTwoFont = "";
 var matches = 0;
 var gameInProgress = true;
 var timer = document.querySelector(".timer");
+var colorSelect = document.querySelectorAll(".color-select");
 
 startGame = function() {
   for (var i=0; i<card.length; i++) {
@@ -14,6 +15,34 @@ startGame = function() {
   };
 
   timer.addEventListener("click", playTimedGame);
+
+  for (var i=0; i<colorSelect.length; i++) {
+    colorSelect[i].addEventListener("click", changeCardColor);
+  };
+};
+
+changeCardColor = function() {
+  var selectedColorBox = this.firstElementChild;
+
+  var newColor = selectedColorBox.getAttribute("data-color");
+
+  if (newColor === "deck-one") {
+    for (var i=0; i<card.length; i++) {
+      card[i].style.backgroundColor = "#3fb0ac";
+    };
+  } else if (newColor === "deck-two") {
+    for (var i=0; i<card.length; i++) {
+      card[i].style.backgroundColor = "#3d50b4";
+    };
+  } else if (newColor === "deck-three") {
+    for (var i=0; i<card.length; i++) {
+      card[i].style.backgroundColor = "#000000";
+    };
+  } else if (newColor === "deck-four") {
+    for (var i=0; i<card.length; i++) {
+      card[i].style.backgroundColor = "#e5e5e5";
+    };
+  };
 };
 
 yourTurn = function() {
@@ -71,7 +100,7 @@ checkAnswer = function() {
 playTimedGame = function() {
   var loser = document.querySelector(".loser-outer");
   var countdown = document.querySelector(".countdown");
-  var seconds = 9;
+  var seconds = 19;
   var second = 0;
   var interval;
 

@@ -68,7 +68,9 @@ h1 {
 
 .intro {
   color: #000;
-  text-align: center; }
+  margin: 0 auto;
+  text-align: center;
+  width: 75%; }
 
 h2 {
   font-family: Merriweather, serif;
@@ -100,8 +102,43 @@ h2 {
   color: #3fb0ac;
   font-size: 20px; }
 
+.choose-colors {
+  margin: 0 auto; }
+
+.color-select {
+  display: inline-block;
+  margin: 20px 5px 5px;
+  text-align: center; }
+
+.deck-one {
+  background-color: #3fb0ac;
+  height: 25px;
+  padding: 5px;
+  text-align: center;
+  width: 25px; }
+
+.deck-two {
+  background-color: #3d50b4;
+  height: 25px;
+  padding: 5px;
+  text-align: center;
+  width: 25px; }
+
+.deck-three {
+  background-color: #000;
+  height: 25px;
+  padding: 5px;
+  text-align: center;
+  width: 25px; }
+
+.deck-four {
+  background-color: #e5e5e5;
+  height: 25px;
+  padding: 5px;
+  text-align: center;
+  width: 25px; }
+
 .container {
-  padding-top: 20px;
   width: 80%; }
 
 .card {
