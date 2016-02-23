@@ -6,6 +6,8 @@ $black: #000;
 $red: #f00;
 $gold: #ffd700;
 $black-background: rgba(0, 0, 0, .5);
+$header-title: Lato, sans-serif;
+$body-text: Merriweather, serif;
 
 *,
 *::before,
@@ -22,7 +24,6 @@ body {
   position: relative;
   width: 100%;
 }
-
 
 .win-lose-outer {
   align-items: center;
@@ -45,8 +46,36 @@ body {
 
   p {
     color: $white;
-    font-size: 40px;
+    font-family: $body-text;
+    font-size: 30px;
+  }
+
+  a:link,
+  a:active,
+  a:visited {
+    border: 2px solid $white;
+    color: $white;
+    font-family: $header-title;
+    font-size: 20px;
     padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  a:hover {
+    background-color: $white;
+    border: 2px solid $white;
+    color: $black-background;
+    font-family: $header-title;
+    font-size: 20px;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+  }
+
+  img {
+    padding: 20px;
   }
 }
 
@@ -54,11 +83,12 @@ header {
   background-color: $dark-blue;
   color: $white;
   overflow: hidden;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   text-align: center;
 }
 
 h1 {
+  font-family: $header-title;
   font-size: 30px;
 }
 
@@ -68,13 +98,16 @@ h1 {
 }
 
 h2 {
+  font-family: $body-text;
   font-size: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 
 .timer {
   display: inline-block;
+  font-family: $header-title;
   font-size: 16px;
+  margin: 3px;
   text-transform: uppercase;
 
   a:link,
@@ -94,6 +127,11 @@ h2 {
     text-decoration: none;
     transition: .5s;
   }
+}
+
+.countdown {
+  color: $blue;
+  font-size: 20px;
 }
 
 .container {

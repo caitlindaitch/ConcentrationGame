@@ -70,11 +70,27 @@ checkAnswer = function() {
 
 playTimedGame = function() {
   var loser = document.querySelector(".loser-outer");
+  var countdown = document.querySelector(".countdown");
+  var seconds = 9;
+  var second = 0;
+  var interval;
+
+  countdown.classList.remove("inactive");
 
   if (gameInProgress === true) {
-    setTimeout(function() {
-      loser.classList.remove("inactive");
-    }, 15000);
+    timer.style.display = 'none';
+
+    interval = setInterval(function() {
+      countdown.firstChild.data = (seconds - second);
+
+      if (second >=seconds) {
+        loser.classList.remove("inactive");
+
+        countdown.classList.add("inactive");
+      };
+
+      second++;
+    }, 1000);;
   };
 };
 
