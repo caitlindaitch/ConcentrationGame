@@ -36,7 +36,7 @@ changeCardColor = function() {
     };
   } else if (newColor === "deck-three") {
     for (var i=0; i<card.length; i++) {
-      card[i].style.backgroundColor = "#000000";
+      card[i].style.backgroundColor = "#b4e9e7";
     };
   } else if (newColor === "deck-four") {
     for (var i=0; i<card.length; i++) {
@@ -100,7 +100,7 @@ checkAnswer = function() {
 playTimedGame = function() {
   var loser = document.querySelector(".loser-outer");
   var countdown = document.querySelector(".countdown");
-  var seconds = 19;
+  var seconds = 29;
   var second = 0;
   var interval;
 

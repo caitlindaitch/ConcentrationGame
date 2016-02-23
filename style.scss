@@ -3,6 +3,7 @@ $dark-blue: #3d50b4;
 $grey: #e5e5e5;
 $white: #fff;
 $black: #000;
+$light-blue: #b4e9e7;
 $black-background: rgba(0, 0, 0, .75);
 $header-title: Lato, sans-serif;
 $body-text: Merriweather, serif;
@@ -161,7 +162,7 @@ h2 {
 }
 
 .deck-three {
-  background-color: $black;
+  background-color: $light-blue;
   height: 25px;
   padding: 5px;
   text-align: center;
@@ -184,7 +185,7 @@ h2 {
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 150px;
+  height: 125px;
   justify-content: center;
 }
 
