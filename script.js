@@ -71,12 +71,10 @@ checkAnswer = function() {
 playTimedGame = function() {
   var loser = document.querySelector(".loser-outer");
 
-  yourTurn();
-
   if (gameInProgress === true) {
     setTimeout(function() {
       loser.classList.remove("inactive");
-    }, 700);
+    }, 15000);
   };
 };
 
