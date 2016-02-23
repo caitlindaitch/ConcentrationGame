@@ -4,6 +4,7 @@ var cardOne = "";
 var cardTwo = "";
 var cardOneFont = "";
 var cardTwoFont = "";
+var matches = 0;
 
 startGame = function() {
   for (var i=0; i<card.length; i++) {
@@ -46,6 +47,10 @@ checkAnswer = function() {
 
       numFlipped = 0;
 
+      matches++;
+
+      winGame();
+
     }, 1000);
   } else {
     setTimeout(function() {
@@ -57,6 +62,16 @@ checkAnswer = function() {
 
     }, 1000);
   };
+};
+
+winGame = function() {
+  if (matches === 6) {
+    var winnerOverlay = document.querySelectorAll("winner-outer");
+    var winnerText = document.querySelectorAll("winner");
+
+    winnerOverlay.classList.remove("inactive");
+    winner.classList.remove("inactive");
+  }
 }
 
 startGame();
