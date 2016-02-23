@@ -3,47 +3,63 @@
   <head>
     <meta charset="utf-8">
     <title>Caitlin Concentration</title>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.indigo-pink.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900italic,900,300italic,300,400italic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,900italic,900,300italic,300,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   <body>
     <div class="full-page">
-      <div class="winner-outer inactive">
-        <div class="winner inactive">
-          Congratulations! You won the game!
+      <div class="win-lose-outer winner-outer inactive">
+        <div class="win-lose">
+          <p>Congratulations! You won the game!</p>
+          <img src="./images/giphy_congrats.gif">
+        </div>
+      </div>
+
+      <div class="win-lose-outer loser-outer inactive">
+        <div class="win-lose">
+          <p>Aw man, you lost. Sorry! Would you like to play again?</p>
+          <img src="./images/giphy_loser.gif">
         </div>
       </div>
 
       <header>
         <h1>Concentration: How well do you know your fonts?</h1>
-        <h2>Click the cards to reveal their fonts and match pairs until you clear the board</h2>
       </header>
+      <div class="intro">
+        <h2>Click the cards to reveal their fonts and find pairs until you clear the board</h2>
+
+        <div class="timer">
+          <a href="">Play with timer</a>
+        </div>
+      </div>
       <div class="container">
         <div class="row">
           <div class="col-md-3 card">
-            <div class="card-back">
+            <div class="card-back mdl-shadow--2dp">
               <span class="inactive" data-font="two">
                 Caitlin
               </span>
             </div>
           </div>
           <div class="col-md-3 card">
-            <div class="card-back">
+            <div class="card-back mdl-shadow--2dp">
               <span class="inactive" data-font="three">
                 Caitlin
               </span>
             </div>
           </div>
           <div class="col-md-3 card">
-            <div class="card-back">
+            <div class="card-back mdl-shadow--2dp">
               <span class="inactive" data-font="five">
                 Caitlin
               </span>
             </div>
           </div>
           <div class="col-md-3 card">
-            <div class="card-back">
+            <div class="card-back mdl-shadow--2dp">
               <span class="inactive" data-font="six">
                 Caitlin
               </span>
@@ -52,28 +68,28 @@
         </div>
         <div class="row">
           <div class="col-md-3 card">
-            <div class="card-back">
+            <div class="card-back mdl-shadow--2dp">
               <span class="inactive" data-font="five">
                 Caitlin
               </span>
             </div>
           </div>
           <div class="col-md-3 card">
-            <div class="card-back">
+            <div class="card-back mdl-shadow--2dp">
               <span class="inactive" data-font="two">
                 Caitlin
               </span>
             </div>
           </div>
           <div class="col-md-3 card">
-            <div class="card-back">
+            <div class="card-back mdl-shadow--2dp">
               <span class="inactive" data-font="four">
                 Caitlin
               </span>
             </div>
           </div>
           <div class="col-md-3 card">
-            <div class="card-back">
+            <div class="card-back mdl-shadow--2dp">
               <span class="inactive" data-font="four">
                 Caitlin
               </span>
@@ -82,28 +98,28 @@
         </div>
         <div class="row">
           <div class="col-md-3 card">
-            <div class="card-back">
+            <div class="card-back mdl-shadow--2dp">
               <span class="inactive" data-font="six">
                 Caitlin
               </span>
             </div>
           </div>
           <div class="col-md-3 card">
-            <div class="card-back">
+            <div class="card-back mdl-shadow--2dp">
               <span class="inactive" data-font="one">
                 Caitlin
               </span>
             </div>
           </div>
           <div class="col-md-3 card">
-            <div class="card-back">
+            <div class="card-back mdl-shadow--2dp">
               <span class="inactive" data-font="three">
                 Caitlin
               </span>
             </div>
           </div>
           <div class="col-md-3 card">
-            <div class="card-back">
+            <div class="card-back mdl-shadow--2dp">
               <span class="inactive" data-font="one">
                 Caitlin
               </span>

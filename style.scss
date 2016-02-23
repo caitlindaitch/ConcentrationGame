@@ -2,6 +2,7 @@ $blue: #3fb0ac;
 $dark-blue: #3d50b4;
 $grey: #e5e5e5;
 $white: #fff;
+$black: #000;
 $red: #f00;
 $gold: #ffd700;
 $black-background: rgba(0, 0, 0, .5);
@@ -23,7 +24,7 @@ body {
 }
 
 
-.winner-outer {
+.win-lose-outer {
   align-items: center;
   background-color: $black-background;
   display: flex;
@@ -38,11 +39,15 @@ body {
   z-index: 9;
 }
 
-.winner {
-  color: $white;
-  font-size: 40px;
+.win-lose {
   text-align: center;
   z-index: 10;
+
+  p {
+    color: $white;
+    font-size: 40px;
+    padding: 10px;
+  }
 }
 
 header {
@@ -53,8 +58,42 @@ header {
   text-align: center;
 }
 
+h1 {
+  font-size: 30px;
+}
+
+.intro {
+  color: $black;
+  text-align: center;
+}
+
 h2 {
   font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.timer {
+  display: inline-block;
+  font-size: 16px;
+  text-transform: uppercase;
+
+  a:link,
+  a:active,
+  a:visited {
+    border: 2px solid $blue;
+    color: $blue;
+    padding: 10px;
+    text-decoration: none;
+  }
+
+  a:hover {
+    background-color: $blue;
+    border: 2px solid $blue;
+    color: $white;
+    padding: 10px;
+    text-decoration: none;
+    transition: .5s;
+  }
 }
 
 .container {

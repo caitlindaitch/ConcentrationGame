@@ -11,7 +11,7 @@ body {
   position: relative;
   width: 100%; }
 
-.winner-outer {
+.win-lose-outer {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
@@ -25,11 +25,13 @@ body {
   width: 100%;
   z-index: 9; }
 
-.winner {
-  color: #fff;
-  font-size: 40px;
+.win-lose {
   text-align: center;
   z-index: 10; }
+  .win-lose p {
+    color: #fff;
+    font-size: 40px;
+    padding: 10px; }
 
 header {
   background-color: #3d50b4;
@@ -38,8 +40,35 @@ header {
   padding-bottom: 20px;
   text-align: center; }
 
+h1 {
+  font-size: 30px; }
+
+.intro {
+  color: #000;
+  text-align: center; }
+
 h2 {
-  font-size: 20px; }
+  font-size: 20px;
+  padding-bottom: 10px; }
+
+.timer {
+  display: inline-block;
+  font-size: 16px;
+  text-transform: uppercase; }
+  .timer a:link,
+  .timer a:active,
+  .timer a:visited {
+    border: 2px solid #3fb0ac;
+    color: #3fb0ac;
+    padding: 10px;
+    text-decoration: none; }
+  .timer a:hover {
+    background-color: #3fb0ac;
+    border: 2px solid #3fb0ac;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    transition: .5s; }
 
 .container {
   padding-top: 20px;

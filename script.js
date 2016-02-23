@@ -5,11 +5,14 @@ var cardTwo = "";
 var cardOneFont = "";
 var cardTwoFont = "";
 var matches = 0;
+var timer = document.querySelector(".timer");
 
 startGame = function() {
   for (var i=0; i<card.length; i++) {
     card[i].addEventListener("click", yourTurn);
   };
+
+  timer.addEventListener("click", timedGame);
 };
 
 yourTurn = function() {
@@ -64,14 +67,22 @@ checkAnswer = function() {
   };
 };
 
-winGame = function() {
-  if (matches === 6) {
-    var winnerOverlay = document.querySelectorAll("winner-outer");
-    var winnerText = document.querySelectorAll("winner");
+timedGame = function() {
+  var loser = document.querySelector(".loser-outer");
 
-    winnerOverlay.classList.remove("inactive");
-    winner.classList.remove("inactive");
-  }
-}
+  setTimeout(function() {
+    loser.classList.remove("inactive");
+  }, 15000);
+};
+
+winGame = function() {
+  var winner = document.querySelector(".winner-outer");
+
+  setTimeout(function() {
+    if (matches === 6) {
+      winner.classList.remove("inactive");
+    };
+  }, 700);
+};
 
 startGame();
