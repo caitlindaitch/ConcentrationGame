@@ -35,19 +35,7 @@ shuffleFonts = function() {
 
   for (var i=0; i<fonts.length; i++) {
     for (var i=0; i<card.length; i++) {
-      if (fonts[i] === "one") {
-        card[i].firstElementChild.dataset.font = "one";
-      } else if (fonts[i] === "two") {
-        card[i].firstElementChild.dataset.font = "two";
-      } else if (fonts[i] === "three") {
-        card[i].firstElementChild.dataset.font = "three";
-      } else if (fonts[i] === "four") {
-        card[i].firstElementChild.dataset.font = "four";
-      } else if (fonts[i] === "five") {
-        card[i].firstElementChild.dataset.font = "five";
-      } else if (fonts[i] === "six") {
-        card[i].firstElementChild.dataset.font = "six";
-      };
+      card[i].firstElementChild.dataset.font = fonts[i];
     };
   };
 };
