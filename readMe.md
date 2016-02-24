@@ -13,7 +13,7 @@ Play the game <a href="http://caitlindaitch.github.io/ConcentrationGame/">here</
 * Clone into your local repository
 * Open index.html, script.js and style.scss (or style.css) in your text editor of choice
 
-# User Stories:
+## User Stories:
 * When I click a card, the font should be displayed
 * When I have two cards revealed, they should be compared and either disappear or completely if matching or go back to their original state if the pair is not a match
 * When I click "Play Timed Game" a 30 second countdown should be displayed
