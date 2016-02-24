@@ -31,7 +31,7 @@ body {
   .win-lose p {
     color: #fff;
     font-family: Merriweather, serif;
-    font-size: 30px; }
+    font-size: 35px; }
   .win-lose a:link,
   .win-lose a:active,
   .win-lose a:visited {
@@ -53,6 +53,7 @@ body {
     text-transform: uppercase;
     transition: .5s; }
   .win-lose img {
+    height: 35vh;
     padding: 20px; }
 
 header {
@@ -159,12 +160,39 @@ h2 {
   margin: 0 auto;
   width: 95%; }
 
+.fonts-used {
+  color: #fff;
+  font-family: Merriweather, serif;
+  font-size: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px; }
+
+.font-one {
+  font-family: arial; }
+
+.font-two {
+  font-family: 'Courier New'; }
+
+.font-three {
+  font-family: 'times new roman'; }
+
+.font-four {
+  font-family: georgia; }
+
+.font-five {
+  font-family: 'arial black'; }
+
+.font-six {
+  color: #fff;
+  font-family: Impact;
+  font-size: 20px; }
+
 [data-font="one"] {
   font-family: arial;
   font-size: 35px; }
 
 [data-font="two"] {
-  font-family: verdana;
+  font-family: 'Courier New';
   font-size: 35px; }
 
 [data-font="three"] {
