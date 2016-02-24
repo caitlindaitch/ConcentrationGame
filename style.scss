@@ -4,6 +4,7 @@ $grey: #e5e5e5;
 $white: #fff;
 $black: #000;
 $light-blue: #b4e9e7;
+$baby-blue: #a2aff7;
 $black-background: rgba(0, 0, 0, .75);
 $header-title: Lato, sans-serif;
 $body-text: Merriweather, serif;
@@ -154,7 +155,7 @@ h2 {
 }
 
 .deck-two {
-  background-color: $dark-blue;
+  background-color: $baby-blue;
   height: 25px;
   padding: 5px;
   text-align: center;

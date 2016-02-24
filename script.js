@@ -32,7 +32,7 @@ changeCardColor = function() {
     };
   } else if (newColor === "deck-two") {
     for (var i=0; i<card.length; i++) {
-      card[i].style.backgroundColor = "#3d50b4";
+      card[i].style.backgroundColor = "#a2aff7";
     };
   } else if (newColor === "deck-three") {
     for (var i=0; i<card.length; i++) {
