@@ -7,3 +7,20 @@ Play the game <a href="http://caitlindaitch.github.io/ConcentrationGame/">here</
 * JavaScript (no jQuery)
 * Bootstrap CSS
 * Material Design CSS
+
+As a user, I should be able to click start and
+
+## Installation Guide:
+* Fork this repo
+* Clone into your local repository
+* Open index.html, script.js and style.scss (or style.css) in your text editor of choice
+
+# User Stories:
+* When I click a card, the font should be displayed
+* When I have two cards revealed, they should be compared and either disappear or completely if matching or go back to their original state if the pair is not a match
+* When I click "Play Timed Game" a 30 second countdown should be displayed
+* If I am playing a timed game and have not won by the end of 30 seconds, a screen should be displayed saying I lost
+* If I match all the pairs and clear the board, a screen should appear telling me that I won the game
+* If I match all the pairs and clear the board, then leave the screen up for the timer to run out, the loser screen should not appear and the countdown should disappear
+* If I click one of the colored boxes, it should change the color of the deck of cards
+* When I refresh the page or play a new game, the cards should be shuffled in a different order

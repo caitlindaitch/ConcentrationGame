@@ -137,13 +137,15 @@ playTimedGame = function() {
 
   countdown.classList.remove("inactive");
 
-  if (gameInProgress === true) {
+  if (gameInProgress) {
     timer.style.display = 'none';
 
     interval = setInterval(function() {
       countdown.firstChild.data = (seconds - second);
 
-      if (second >=seconds) {
+      if (second >= seconds && gameInProgress === false) {
+        countdown.classList.add("inactive");
+      } else if (second >= seconds) {
         loser.classList.remove("inactive");
 
         countdown.classList.add("inactive");
@@ -157,11 +159,11 @@ playTimedGame = function() {
 winGame = function() {
   var winner = document.querySelector(".winner-outer");
 
-  gameInProgress = false;
-
   setTimeout(function() {
     if (matches === 6) {
       winner.classList.remove("inactive");
+
+      gameInProgress = false;
     };
   }, 700);
 };
