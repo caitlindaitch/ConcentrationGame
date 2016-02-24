@@ -8,8 +8,6 @@ Play the game <a href="http://caitlindaitch.github.io/ConcentrationGame/">here</
 * Bootstrap CSS
 * Material Design CSS
 
-As a user, I should be able to click start and
-
 ## Installation Guide:
 * Fork this repo
 * Clone into your local repository
