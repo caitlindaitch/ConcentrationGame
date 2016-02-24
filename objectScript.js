@@ -1,3 +1,5 @@
+"use strict";
+
 var game = {
   numFlipped: 0,
   card: document.querySelectorAll(".card-back"),
@@ -24,25 +26,9 @@ var game = {
   },
 
   shuffleFonts: function() {
-    this.fonts.forEach(function(font) {
-      this.fonts.sort(function() {
-        if (Math.random() > 0.5) {
-          return 1;
-        } else {
-          return -1;
-        };
-      });
-    });
+    var self = this;
 
-    for (var i=0; i<this.fonts.length; i++) {
-      for (var i=0; i<this.card.length; i++) {
-        this.card[i].firstElementChild.dataset.font = this.fonts[i];
-      };
-    };
-  },
-
-  shuffleFonts: function() {
-    var self = game;
+    console.log(self);
 
     self.fonts.forEach(function(font) {
       self.fonts.sort(function() {
@@ -55,7 +41,7 @@ var game = {
     });
 
     for (var i=0; i<self.fonts.length; i++) {
-      for (var i=0; i<self.card.length; i++) {
+      for (var j=0; j<self.card.length; j++) {
         self.card[i].firstElementChild.dataset.font = self.fonts[i];
       };
     };
@@ -67,23 +53,20 @@ var game = {
 
     var newColor = selectedColorBox.getAttribute("data-color");
 
-    if (newColor === "deck-one") {
-      for (var i=0; i<self.card.length; i++) {
-        self.card[i].style.backgroundColor = "#3fb0ac";
-      };
-    } else if (newColor === "deck-two") {
-      for (var i=0; i<self.card.length; i++) {
-        self.card[i].style.backgroundColor = "#a2aff7";
-      };
-    } else if (newColor === "deck-three") {
-      for (var i=0; i<self.card.length; i++) {
-        self.card[i].style.backgroundColor = "#b4e9e7";
-      };
-    } else if (newColor === "deck-four") {
-      for (var i=0; i<self.card.length; i++) {
-        self.card[i].style.backgroundColor = "#e5e5e5";
-      };
-    };
+    var colorPairs = [
+      ["deck-one", "#3fb0ac"],
+      ["deck-two", "#a2aff7"],
+      ["deck-three", "#b4e9e7"],
+      ["deck-four", "#e5e5e5"]
+    ];
+
+    colorPairs.forEach(function(pair){
+      if(newColor === pair[0]){
+        for (var i=0; i<self.card.length; i++) {
+          self.card[i].style.backgroundColor = pair[1];
+        };
+      }
+    });
   },
 
   yourTurn: function() {
