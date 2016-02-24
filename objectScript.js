@@ -10,6 +10,7 @@ var game = {
   timer: document.querySelector(".timer"),
   colorSelect: document.querySelectorAll(".color-select"),
   fonts: ["one", "one", "two", "two", "three", "three", "four", "four", "five", "five", "six", "six"],
+
   startGame: function() {
     for (var i=0; i<this.card.length; i++) {
       this.card[i].addEventListener("click", this.yourTurn);
@@ -148,7 +149,6 @@ var game = {
     var second = 0;
     var interval;
     var self = game;
-    var superSelf = self.gameInProgress;
 
     countdown.classList.remove("inactive");
 
@@ -158,12 +158,12 @@ var game = {
       self.interval = setInterval(function() {
         countdown.firstChild.data = (seconds - second);
 
-        if (second >= seconds && superSelf === false) {
+        if (second >= seconds) {
           countdown.classList.add("inactive");
-        } else if (second >= seconds) {
-          loser.classList.remove("inactive");
 
-          countdown.classList.add("inactive");
+          if (self.gameInProgress) {
+            loser.classList.remove("inactive");
+          };
         };
 
         second++;
