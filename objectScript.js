@@ -1,5 +1,3 @@
-"use strict";
-
 var game = {
   numFlipped: 0,
   card: document.querySelectorAll(".card-back"),
@@ -76,12 +74,12 @@ var game = {
     if (self.numFlipped === 0) {
       activeCard.classList.remove("inactive");
 
-      self.numFlipped++;
-
       self.cardOne = activeCard;
       self.cardOneFont = activeCard.getAttribute("data-font");
 
-    } else if (self.numFlipped === 1) {
+      self.numFlipped++;
+
+    } else if (self.numFlipped === 1 && self.cardOne != activeCard) {
       activeCard.classList.remove("inactive");
 
       self.numFlipped++;

@@ -1,6 +1,7 @@
 $blue: #3fb0ac;
 $dark-blue: #3d50b4;
 $grey: #e5e5e5;
+$dark-grey: #606060;
 $white: #fff;
 $black: #000;
 $light-blue: #b4e9e7;
@@ -94,7 +95,7 @@ h1 {
 }
 
 .intro {
-  color: $black;
+  color: $dark-grey;
   margin: 0 auto;
   text-align: center;
   width: 75%;
