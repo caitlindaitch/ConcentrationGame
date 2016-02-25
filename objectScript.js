@@ -26,8 +26,6 @@ var game = {
   shuffleFonts: function() {
     var self = this;
 
-    console.log(self);
-
     self.fonts.forEach(function(font) {
       self.fonts.sort(function() {
         if (Math.random() > 0.5) {
