@@ -9,7 +9,10 @@ var game = {
   gameInProgress: true,
   timer: document.querySelector(".timer"),
   colorSelect: document.querySelectorAll(".color-select"),
-  fonts: ["one", "one", "two", "two", "three", "three", "four", "four", "five", "five", "six", "six"],
+  fontsHard: [ ["one", "Font"], ["one", "Font"], ["two", "Font"], ["two", "Font"], ["three", "Font"], ["three", "Font"], ["four", "Font"], ["four", "Font",], ["five", "Font"], ["five", "Font"], ["six", "Font"], ["six", "Font"] ],
+  fontsEasy: [ ["one", "Arial"], ["one", "Arial"], ["two", "Courier New"], ["two", "Courier New"], ["three", "Times New Roman"], ["three", "Times New Roman"], ["four", "Georgia"], ["four", "Georgia"], ["five", "Arial Black"], ["five", "Arial Black"], ["six", "Impact"], ["six", "Impact"]],
+  hardGame: document.querySelector(".hard"),
+  easyGame: document.querySelector(".easy"),
 
   startGame: function() {
     for (var i=0; i<this.card.length; i++) {
@@ -21,13 +24,17 @@ var game = {
     for (var i=0; i<this.colorSelect.length; i++) {
       this.colorSelect[i].addEventListener("click", this.changeCardColor);
     };
+
+    this.hardGame.addEventListener("click", this.shuffleFontsHard);
+
+    this.easyGame.addEventListener("click", this.shuffleFontsEasy);
   },
 
-  shuffleFonts: function() {
-    var self = this;
+  shuffleFonts: function(fontArray) {
+    var self = game;
 
-    self.fonts.forEach(function(font) {
-      self.fonts.sort(function() {
+    fontArray.forEach(function() {
+      fontArray.sort(function() {
         if (Math.random() > 0.5) {
           return 1;
         } else {
@@ -36,11 +43,27 @@ var game = {
       });
     });
 
-    for (var i=0; i<self.fonts.length; i++) {
+    for (var i=0; i<fontArray.length; i++) {
       for (var j=0; j<self.card.length; j++) {
-        self.card[i].firstElementChild.dataset.font = self.fonts[i];
+        self.card[i].firstElementChild.dataset.font = fontArray[i][0];
+
+        self.card[i].firstElementChild.innerHTML = fontArray[i][1];
       };
     };
+  },
+
+  shuffleFontsHard: function() {
+    var self = game;
+
+    console.log(self.fontsHard);
+
+    self.shuffleFonts(self.fontsHard);
+  },
+
+  shuffleFontsEasy: function() {
+    var self = game;
+
+    self.shuffleFonts(self.fontsEasy);
   },
 
   changeCardColor: function() {
@@ -76,7 +99,6 @@ var game = {
       self.cardOneFont = activeCard.getAttribute("data-font");
 
       self.numFlipped++;
-
     } else if (self.numFlipped === 1 && self.cardOne != activeCard) {
       activeCard.classList.remove("inactive");
 
@@ -165,4 +187,3 @@ var game = {
 };
 
 game.startGame();
-game.shuffleFonts();
