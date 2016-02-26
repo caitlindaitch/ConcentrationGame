@@ -75,11 +75,12 @@ h1 {
 
 h2 {
   font-family: Merriweather, serif;
-  font-size: 20px; }
+  font-size: 18px; }
 
 .level {
   background-color: #3d50b4;
   border: 2px solid #3d50b4;
+  border-radius: 3px;
   display: inline-block;
   margin-bottom: 8px;
   padding: 3px; }
@@ -92,8 +93,8 @@ h2 {
     text-transform: uppercase; }
 
 .level:hover {
-  background-color: rgba(61, 80, 180, 0.6);
-  border: 2px solid #3d50b4; }
+  background-color: rgba(61, 80, 180, 0.8);
+  transition: .5s; }
 
 .timer {
   display: inline-block;

@@ -1,6 +1,6 @@
 $blue: #3fb0ac;
 $dark-blue: #3d50b4;
-$blue-transparent: rgba(61, 80, 180, .6);
+$blue-transparent: rgba(61, 80, 180, .8);
 $grey: #e5e5e5;
 $dark-grey: #606060;
 $white: #fff;
@@ -104,12 +104,13 @@ h1 {
 
 h2 {
   font-family: $body-text;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .level {
   background-color: $dark-blue;
   border: 2px solid $dark-blue;
+  border-radius: 3px;
   display: inline-block;
   margin-bottom: 8px;
   padding: 3px;
@@ -126,7 +127,7 @@ h2 {
 
 .level:hover {
   background-color: $blue-transparent;
-  border: 2px solid $dark-blue;
+  transition: .5s;
 }
 
 .timer {
