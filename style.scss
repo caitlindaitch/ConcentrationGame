@@ -1,5 +1,6 @@
 $blue: #3fb0ac;
 $dark-blue: #3d50b4;
+$blue-transparent: rgba(61, 80, 180, .6);
 $grey: #e5e5e5;
 $dark-grey: #606060;
 $white: #fff;
@@ -104,7 +105,28 @@ h1 {
 h2 {
   font-family: $body-text;
   font-size: 20px;
-  padding-bottom: 15px;
+}
+
+.level {
+  background-color: $dark-blue;
+  border: 2px solid $dark-blue;
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 3px;
+
+  a:active,
+  a:link,
+  a:visited {
+    color: $white;
+    font-family: $header-title;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
+.level:hover {
+  background-color: $blue-transparent;
+  border: 2px solid $dark-blue;
 }
 
 .timer {
@@ -235,37 +257,36 @@ h2 {
 .font-six {
   color: $white;
   font-family: Impact;
-  font-size: 20px;
 }
 
 [data-font="one"] {
   font-family: arial;
-  font-size: 35px;
+  font-size: 27px;
 }
 
 [data-font="two"] {
   font-family: 'Courier New';
-  font-size: 35px;
+  font-size: 27px;
 }
 
 [data-font="three"] {
   font-family: 'times new roman';
-  font-size: 35px;
+  font-size: 27px;
 }
 
 [data-font="four"] {
   font-family: georgia;
-  font-size: 35px;
+  font-size: 27px;
 }
 
 [data-font="five"] {
   font-family: 'arial black';
-  font-size: 35px;
+  font-size: 27px;
 }
 
 [data-font="six"] {
   font-family: Impact;
-  font-size: 35px;
+  font-size: 27px;
 }
 
 .inactive {

@@ -55,9 +55,10 @@ var game = {
   shuffleFontsHard: function() {
     var self = game;
 
-    console.log(self.fontsHard);
-
     self.shuffleFonts(self.fontsHard);
+
+    self.hardGame.removeEventListener("click", self.shuffleFontsHard, false);
+    self.easyGame.removeEventListener("click", self.shuffleFontsEasy, false);
   },
 
   shuffleFontsEasy: function() {
