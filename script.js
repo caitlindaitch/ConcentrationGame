@@ -14,20 +14,22 @@ var game = {
   hardGame: document.querySelector(".hard"),
   easyGame: document.querySelector(".easy"),
 
+  selectLevel: function() {
+    this.hardGame.addEventListener("click", this.shuffleFontsHard);
+
+    this.easyGame.addEventListener("click", this.shuffleFontsEasy);
+
+    for (var i=0; i<this.colorSelect.length; i++) {
+      this.colorSelect[i].addEventListener("click", this.changeCardColor);
+    };
+  },
+
   startGame: function() {
     for (var i=0; i<this.card.length; i++) {
       this.card[i].addEventListener("click", this.yourTurn);
     };
 
     this.timer.addEventListener("click", this.playTimedGame);
-
-    for (var i=0; i<this.colorSelect.length; i++) {
-      this.colorSelect[i].addEventListener("click", this.changeCardColor);
-    };
-
-    this.hardGame.addEventListener("click", this.shuffleFontsHard);
-
-    this.easyGame.addEventListener("click", this.shuffleFontsEasy);
   },
 
   shuffleFonts: function(fontArray) {
@@ -50,6 +52,8 @@ var game = {
         self.card[i].firstElementChild.innerHTML = fontArray[i][1];
       };
     };
+
+    this.startGame();
   },
 
   shuffleFontsHard: function() {
@@ -187,4 +191,4 @@ var game = {
   }
 };
 
-game.startGame();
+game.selectLevel();
