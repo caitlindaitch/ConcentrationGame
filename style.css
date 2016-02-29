@@ -15,6 +15,7 @@ body {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.75);
   display: flex;
+  filter: blur(15px);
   flex-direction: column;
   height: 100vh;
   justify-content: center;
@@ -93,7 +94,7 @@ h2 {
     text-transform: uppercase; }
 
 .level:hover {
-  background-color: rgba(61, 80, 180, 0.8);
+  background-color: rgba(61, 80, 180, 0.95);
   transition: .5s; }
 
 .timer {
