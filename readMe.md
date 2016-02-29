@@ -15,9 +15,7 @@ Play the game <a href="http://caitlindaitch.github.io/ConcentrationGame/">here</
 
 ## User Stories:
 <!--I think your really close on the user stories here but I still think it's missing a more specifics. A user story describes the type of user, what they want and why -->
-<!--For example for the user story below, although it may be implied, there should be an indication of who this user story is for. It should read more like "As a user, I could be able to click on a card, and it's corresponding font should be displayed so they can see the card's image"   -->
 * When I click a card, the font should be displayed
-<!--The user story below is a little confusing  -->
 * When I have two cards revealed, they should be compared and either disappear or completely if matching or go back to their original state if the pair is not a match
 * When I click "Play Timed Game" a 30 second countdown should be displayed
 * If I am playing a timed game and have not won by the end of 30 seconds, a screen should be displayed saying I lost

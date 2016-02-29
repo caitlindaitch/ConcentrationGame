@@ -101,7 +101,7 @@ var game = {
 
     colorPairs.forEach(function(pair){
       if(newColor === pair[0]){
-        for (var i=0; i<self.card.length; i++) {
+        for (var i= 0; i < self.card.length; i++) {
           self.card[i].style.backgroundColor = pair[1];
         };
       }
@@ -227,3 +227,5 @@ var game = {
 };
 
 game.selectLevel();
+
+// Overall, Awesome job your code looks great! 
