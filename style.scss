@@ -1,6 +1,6 @@
 $blue: #3fb0ac;
 $dark-blue: #3d50b4;
-$blue-transparent: rgba(61, 80, 180, .8);
+$blue-transparent: rgba(61, 80, 180, .95);
 $grey: #e5e5e5;
 $dark-grey: #606060;
 $white: #fff;
@@ -31,6 +31,7 @@ body {
   align-items: center;
   background-color: $black-background;
   display: flex;
+  filter: blur(15px);
   flex-direction: column;
   height: 100vh;
   justify-content: center;
