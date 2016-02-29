@@ -167,9 +167,11 @@ var game = {
         if (second >= seconds) {
           countdown.classList.add("inactive");
 
-          if (self.gameInProgress) {
-            loser.classList.remove("inactive");
-          };
+          setTimeout(function() {
+            if (self.gameInProgress) {
+              loser.classList.remove("inactive");
+            };
+          }, 500);
         };
 
         second++;
@@ -181,13 +183,11 @@ var game = {
     var winner = document.querySelector(".winner-outer");
     var self = this;
 
-    setTimeout(function() {
-      if (self.matches === 6) {
-        winner.classList.remove("inactive");
+    if (self.matches === 6) {
+      winner.classList.remove("inactive");
 
-        self.gameInProgress = false;
-      };
-    }, 700);
+      self.gameInProgress = false;
+    };
   }
 };
 
