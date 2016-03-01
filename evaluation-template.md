@@ -11,7 +11,7 @@
 
 >Did you deliver a project that met all the technical requirements? Given what the class has covered so far, did you build something that was reasonably complex?
 
-***Your memory game not only is very functional and rather complex, the interface is awesome, and it’s extremely creative. Also, your css/sass is exceptional! I love the user interface and design of your game.***
+***Your memory game not only is very functional and rather complex, the interface is awesome, and it’s extremely creative. Also, your CSS/SASS is exceptional! I love the user interface and design of your game.***
 
 
 * __Code Quality__: **Exceeds Expectations**
