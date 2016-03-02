@@ -9,8 +9,11 @@ var game = {
   gameInProgress: true,
   timer: document.querySelector(".timer"),
   colorSelect: document.querySelectorAll(".color-select"),
-  fontsHard: [ ["one", "Font"], ["one", "Font"], ["two", "Font"], ["two", "Font"], ["three", "Font"], ["three", "Font"], ["four", "Font"], ["four", "Font",], ["five", "Font"], ["five", "Font"], ["six", "Font"], ["six", "Font"] ],
-  fontsEasy: [ ["one", "Arial"], ["one", "Arial"], ["two", "Courier New"], ["two", "Courier New"], ["three", "Times New Roman"], ["three", "Times New Roman"], ["four", "Georgia"], ["four", "Georgia"], ["five", "Arial Black"], ["five", "Arial Black"], ["six", "Impact"], ["six", "Impact"]],
+  fonts: ["one", "two", "three", "four", "five", "six"],
+  easy: ["Arial", "Courier New", "Times New Roman", "Georgia", "Arial Black", "Impact"],
+  hard: ["Font", "Font", "Font", "Font", "Font", "Font"],
+  fontsEasy: [],
+  fontsHard: [],
   hardGame: document.querySelector(".hard"),
   easyGame: document.querySelector(".easy"),
 
@@ -22,6 +25,10 @@ var game = {
     for (var i=0; i<this.colorSelect.length; i++) {
       this.colorSelect[i].addEventListener("click", this.changeCardColor);
     };
+
+    this.createEasyArray();
+
+    this.createHardArray();
   },
 
   startGame: function() {
@@ -30,6 +37,18 @@ var game = {
     };
 
     this.timer.addEventListener("click", this.playTimedGame);
+  },
+
+  createEasyArray: function() {
+    for (var i=0; i<this.fonts.length; i++) {
+      this.fontsEasy.push([this.fonts[i], this.easy[i]], [this.fonts[i], this.easy[i]]);
+    };
+  },
+
+  createHardArray: function() {
+    for (var i=0; i<this.fonts.length; i++) {
+      this.fontsHard.push([this.fonts[i], this.hard[i]], [this.fonts[i], this.hard[i]]);
+    };
   },
 
   shuffleFonts: function(fontArray) {
@@ -46,23 +65,21 @@ var game = {
     });
 
     for (var i=0; i<fontArray.length; i++) {
-      for (var j=0; j<self.card.length; j++) {
-        self.card[i].firstElementChild.dataset.font = fontArray[i][0];
+      self.card[i].firstElementChild.dataset.font = fontArray[i][0];
 
-        self.card[i].firstElementChild.innerHTML = fontArray[i][1];
-      };
+      self.card[i].firstElementChild.innerHTML = fontArray[i][1];
     };
 
     this.startGame();
+
+    self.hardGame.removeEventListener("click", self.shuffleFontsHard, false);
+    self.easyGame.removeEventListener("click", self.shuffleFontsEasy, false);
   },
 
   shuffleFontsHard: function() {
     var self = game;
 
     self.shuffleFonts(self.fontsHard);
-
-    self.hardGame.removeEventListener("click", self.shuffleFontsHard, false);
-    self.easyGame.removeEventListener("click", self.shuffleFontsEasy, false);
   },
 
   shuffleFontsEasy: function() {
