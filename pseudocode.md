@@ -10,6 +10,7 @@ Add a title
 Add a timer
 Randomize location of font divs within boxes
 
+<!--I think it's great that you did pseudocode!!! It still reads a little too much like code though -->
 * JS
 variable numFlipped = 0;
 variable card = DOM element selecting boxes;
@@ -19,7 +20,6 @@ variable cardOneFont = "";
 variable cardTwoFont = "";
 
 addEventListener on card for clicks;
-
 if numFlipped <= 2; {
   function selectCard();
     numFlipped++;

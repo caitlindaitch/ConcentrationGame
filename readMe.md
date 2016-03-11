@@ -14,6 +14,7 @@ Play the game <a href="http://caitlindaitch.github.io/ConcentrationGame/">here</
 * Open index.html, script.js and style.scss (or style.css) in your text editor of choice
 
 ## User Stories:
+<!--I think your really close on the user stories here but I still think it's missing a more specifics. A user story describes the type of user, what they want and why -->
 * When I click a card, the font should be displayed
 * When I have two cards revealed, they should be compared and either disappear or completely if matching or go back to their original state if the pair is not a match
 * When I click "Play Timed Game" a 30 second countdown should be displayed

@@ -1,3 +1,4 @@
+//Awesome job putting this all into one object
 var game = {
   numFlipped: 0,
   card: document.querySelectorAll(".card-back"),
@@ -18,6 +19,19 @@ var game = {
   easyGame: document.querySelector(".easy"),
 
   selectLevel: function() {
+    // I think you could have one callback function for both of these event listeners:
+    // for example since they have a class of hard and easy maybe change the name of your fonts arrays property to easy & hard
+    // and write a function like this:
+
+    // this.hardGame.addEventListener("click", this.shuffleFonts);
+    // this.easyGame.addEventListener("click", this.shuffleFontsHard);
+
+    // shuffleFonts: function(){
+    //   var type = this.classList[0];
+    //   var self = game;
+    //   self.shuffleFonts(self.type);
+    // }
+
     this.hardGame.addEventListener("click", this.shuffleFontsHard);
 
     this.easyGame.addEventListener("click", this.shuffleFontsEasy);
@@ -77,6 +91,7 @@ var game = {
   },
 
   shuffleFontsHard: function() {
+    // I actually really liked that you used self for this instance, it might help in the future iterating on this code
     var self = game;
 
     self.shuffleFonts(self.fontsHard);
@@ -103,7 +118,7 @@ var game = {
 
     colorPairs.forEach(function(pair){
       if(newColor === pair[0]){
-        for (var i=0; i<self.card.length; i++) {
+        for (var i= 0; i < self.card.length; i++) {
           self.card[i].style.backgroundColor = pair[1];
         };
       }
@@ -114,7 +129,19 @@ var game = {
     var activeCard = this.firstElementChild;
     var self = game;
 
+
     if (self.numFlipped === 0) {
+
+      // I would abstract this into a separate function and call it here:
+      // self.cardOne = activeCard;
+      // changeActiveClass(activeCard, self);
+
+    //   changeActiveClass = function(activeCard, self){
+      //   activeCard.classList.remove("inactive");
+      //   self.cardOne = activeCard;
+      //   self.cardOneFont = activeCard.getAttribute("data-font");
+      //   self.numFlipped++;
+    // }
       activeCard.classList.remove("inactive");
 
       self.cardOne = activeCard;
@@ -122,6 +149,11 @@ var game = {
 
       self.numFlipped++;
     } else if (self.numFlipped === 1 && self.cardOne != activeCard) {
+      // I would do the same thing here in this case:
+      // self.cardTwo = activeCard;
+      // changeActiveClass(activeCard, self);
+      // self.checkAnswer();
+      //
       activeCard.classList.remove("inactive");
 
       self.numFlipped++;
@@ -134,6 +166,7 @@ var game = {
   },
 
   checkAnswer: function() {
+    // I would separate the setTimeout into a separate method/function from checkAnswer
     if (this.cardOneFont === this.cardTwoFont) {
       var selectedCardOne = this.cardOne.parentNode;
       var selectedCardTwo = this.cardTwo.parentNode;
@@ -166,6 +199,8 @@ var game = {
   },
 
   playTimedGame: function() {
+    // I would try to break this function down further as well, it's a little dificult to read and understand
+    // exactly what your trying to achieve
     var loser = document.querySelector(".loser-outer");
     var countdown = document.querySelector(".countdown");
     var seconds = 29;
@@ -209,3 +244,5 @@ var game = {
 };
 
 game.selectLevel();
+
+// Overall, Awesome job your code looks great! 
